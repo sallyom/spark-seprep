@@ -40,3 +40,6 @@ jobs:
         run: ruff format --diff --target-version=py39 .
         continue-on-error: true
 
+      - name: Run script
+        working-directory: student-work/assignment-5/urvashi-mohnani
+        run: python two-sum.py
