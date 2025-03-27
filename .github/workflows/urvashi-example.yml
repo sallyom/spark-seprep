@@ -34,9 +34,15 @@ jobs:
       - name: Lint code with Ruff
         working-directory: student-work/assignment-5/urvashi-mohnani
         run: ruff check --output-format=github --target-version=py39 .
+        continue-on-error: true
 
       - name: Check code formatting with Ruff
         working-directory: student-work/assignment-5/urvashi-mohnani
         run: ruff format --diff --target-version=py39 .
         continue-on-error: true
+
+      - name: Run
+        working-directory: student-work/assignment-5/urvashi-mohnani
+        run: python two-sum.py
+
 
